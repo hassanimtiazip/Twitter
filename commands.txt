@@ -1,0 +1,22 @@
+commands:-
+
+hdfs namenode-format
+
+cd ..
+cd ..
+
+cd hadoop-3.2.3
+
+
+cd sbin
+
+start-yarn
+
+start-dfs
+
+
+at ending:-
+
+powershell.exe -NoProfile -InputFormat none -ExecutionPolicy unrestricted -File C:\apache-flume-1.10.0-bin\bin\flume-ng.ps1 version
+
+flume-ng agent -n TwitterAgent -c conf -f C:/apache-flume-1.10.0-bin/conf/twitter.conf -property flume.root.logger=DEBUG,console
